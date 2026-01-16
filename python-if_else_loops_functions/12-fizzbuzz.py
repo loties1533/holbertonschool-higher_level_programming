@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 def fizzbuzz():
-    for i in range(1, 100):
+    for i in range(1, 101):
         if i % 15 == 0:
             print("{}".format("FizzBuzz"), end=" ")
         elif i % 3 == 0:
@@ -9,4 +9,3 @@ def fizzbuzz():
             print("{}".format("Buzz"), end=" ")
         else:
             print("{}".format(i), end=" ")
-
