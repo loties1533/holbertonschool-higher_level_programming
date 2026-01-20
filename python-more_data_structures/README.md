@@ -28,3 +28,5 @@ start = début (inclus)
 stop = fin (exclu)
 
 step = pas (optionnel, par défaut 1)
+
+set = une structure de données qui stocke des éléments uniques, sans ordre, et supprime automatiquement les doublons
