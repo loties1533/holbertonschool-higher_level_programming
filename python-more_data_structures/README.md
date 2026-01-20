@@ -29,4 +29,8 @@ stop = fin (exclu)
 
 step = pas (optionnel, par défaut 1)
 
-set = une structure de données qui stocke des éléments uniques, sans ordre, et supprime automatiquement les doublons
+set = une structure de données qui stocke des éléments uniques, sans ordre, et supprime automatiquement les doublons 
+ * exemple : nombre_unique = set(my_list)
+transforme la liste en ensemble (set)
+enlève automatiquement tous les doublons
+stok le resultat dans nombre_unique
