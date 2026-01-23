@@ -1,0 +1,42 @@
+>>> print_square = __import__('4-print_square').print_square
+
+# carré 4x4
+>>> print_square(4)
+####
+####
+####
+####
+
+# carré 10x10
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+# carré 0 (rien à afficher)
+>>> print_square(0)
+
+# carré 1x1
+>>> print_square(1)
+#
+
+# erreur si size < 0
+>>> try:
+...     print_square(-1)
+... except Exception as e:
+...     print(e)
+size must be >= 0
+
+# erreur si size n'est pas un entier
+>>> try:
+...     print_square(3.5)
+... except Exception as e:
+...     print(e)
+size must be an integer
