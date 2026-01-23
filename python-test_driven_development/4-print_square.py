@@ -3,6 +3,8 @@
 module 4-print_square :
 affiche un carré de char #
 """
+
+
 def print_square(size):
     """
     affiche un carré de # taille 'size'
