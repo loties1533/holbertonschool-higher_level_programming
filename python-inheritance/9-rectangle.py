@@ -5,6 +5,7 @@ avec class rectangle qui hérite de basegeometry
 """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """
     class Rectangle qui herite de basegeometry
