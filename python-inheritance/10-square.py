@@ -4,6 +4,7 @@ module square qui va heriter de class rectangle
 """
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """
     class square qui herite de rectangle
