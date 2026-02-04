@@ -21,18 +21,21 @@ class CountedIterator:
         self.compteur = 0
 
     def __next__(self):
+
         """
-        renvoie l élément suivant
-        incrémentation du compteur +1
-        Returns:
-            élément suivant de l'itérable
-        Raises:
-            StopIteration: si plus aucun élément disponible
+        renvoie le prochain élément et incrémente compteur +1
+        raises:
+            StopIteration: si plus d'élément dispo
         """
-        element = next(self.it)
-        self.compteur += 1
-        return (element)
+        try:
+            element = next(self.it)
+            self.compteur += 1
+            return element
+        except StopIteration:
+            raise
 
     def get_count(self):
-
+        """
+        renvoie le nombre d élément et nombre d itération
+        """
         return (self.compteur)
