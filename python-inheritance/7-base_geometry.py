@@ -11,16 +11,15 @@ class BaseGeometry:
     """
     def area(self):
         """
-        methode pour lever une exeption car rien
-        d'implementer
+        leve une exception car la méthode n'est pas implémentée
         """
 
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """
-        valide uniquement des entier positif
-        sinon TypeError ou ValueError
+        Valide qu'une valeur est un entier positif
+        leve TypeError si ce n'est pas un entier ou ValueError si <= 0
         """
 
         if not isinstance(value, int):
