@@ -1,14 +1,18 @@
 #!/usr/bin/python3
 """
-class MyList qui herite de list et ajout methode de trie
+Module MyList : classe qui hérite de 'list' et ajoute une méthode pour afficher
+la liste triée sans modifier l'ordre original
 """
 
 
 class MyList(list):
     """
-    ma class qui herité de liste et va ajouté une methode
-    pour afficher une liste triée
+    classe MyList qui hérite des listes
+    ajout la méthode print_sorted() pour afficher liste triée
     """
     def print_sorted(self):
-        """crée une nouvelle liste par ordre croissant"""
+        """
+        affiche les éléments de la liste par ordre croissant
+        sans toucher la liste originale
+        """
         print(sorted(self))
