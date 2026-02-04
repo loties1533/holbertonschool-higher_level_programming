@@ -7,7 +7,7 @@ la liste triée sans modifier l'ordre original
 
 class MyList(list):
     """
-    classe MyList qui hérite des listes
+    classe MyList qui hérite des liste (sous class)
     ajout la méthode print_sorted() pour afficher liste triée
     """
     def print_sorted(self):
