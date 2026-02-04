@@ -6,6 +6,8 @@ fonction qui renvoie la liste des attributs et méthodes disponibles d'un objet
 
 def lookup(obj):
     """
-    return : la liste d attribut et methode de class ou objet
+    renvoie la liste d un objet
+    args = obj
+    return : liste de obj
     """
     return dir(obj)
