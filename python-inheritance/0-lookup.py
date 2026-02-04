@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module qui definit une fonction pour lister les attribut et methode dispo d'un objet
+module qui definit une fonction pr lister attribut et methode dispo d'un objet
 """
 
 
