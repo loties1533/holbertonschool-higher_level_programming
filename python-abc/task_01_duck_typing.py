@@ -42,7 +42,7 @@ class Circle(Shape):
         pour calcul du cercle
         """
 
-        self.radius = radius
+        self.radius = (abs)radius
 
     def area(self):
         """
