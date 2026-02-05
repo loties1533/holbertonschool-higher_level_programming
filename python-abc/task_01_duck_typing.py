@@ -1,100 +1,83 @@
 #!/usr/bin/env python3
 """
-Module pour gérer des forme géometrique avec une class abstraite Shape
-contient les class Circle et Rectangle, et d'une fonction shape_info
-pour afficher l aire et le périmetre de n'importe quelle forme
+Module pour gérer des formes géométriques avec une classe abstraite Shape.
+Contient les classes Circle et Rectangle, et une fonction shape_info
+pour afficher l'aire et le périmètre de n'importe quelle forme.
 """
 
 from abc import ABC, abstractmethod
 import math
 
+
 class Shape(ABC):
     """
-    class abstraite 'Shape' pour representer une forme 
-    geometrique
+    Classe abstraite 'Shape' pour représenter une forme géométrique.
     """
 
     @abstractmethod
     def area(self):
-        """
-        calcul de l aire 
-        methode abstraite
-        """
-
+        """Calcul de l'aire (méthode abstraite)."""
         pass
+
     @abstractmethod
     def perimeter(self):
         """
-        calcul le perimetre
-        methode abstraite
+        calcul du périmètre (méthode abstraite)
         """
-
         pass
+
 
 class Circle(Shape):
     """
-    class circle (un cercle) qui herite de shape
+    Classe Circle (cercle) qui hérite de Shape.
     """
 
     def __init__(self, radius):
         """
-        initialisation le cercle avec le rayon 
-        pour calcul du cercle
+        Initialisation du cercle avec le rayon
         """
-
-        self.radius = (abs)radius
+        self.radius = abs(radius)
 
     def area(self):
         """
-        calcul l aire du cercle
+        calcul de l aire du cercle
         """
-
         return math.pi * self.radius ** 2
 
     def perimeter(self):
-        """
-        calcul le perimetre du cercle
-        """
-
+        """Calcul du périmètre du cercle."""
         return 2 * math.pi * self.radius
+
 
 class Rectangle(Shape):
     """
-    class rectangle qui herite ossi de shape
+    Classe Rectangle qui hérite de Shape
     """
-
 
     def __init__(self, width, height):
         """
-        initialisation avec widht et height 
-        (largeur /hauteur)
+        Initialisation avec largeur (width) et hauteur (height)
         """
-        self.width = width
-        self.height = height
+        self.width = abs(width)
+        self.height = abs(height)
 
     def area(self):
         """
-        calcul l air du rectangle
+        Calcul de l'aire du rectangle
         """
         return self.width * self.height
 
     def perimeter(self):
         """
-        calcul le perimentre du rectangle
+        Calcul du périmètre du rectangle.
         """
-
         return 2 * (self.width + self.height)
+
 
 def shape_info(shape):
     """
-    affiche et + perimetre de nomporte quelle forme 
-    (shape_info ne vérifie jamais le type)
+    affiche l'aire et le périmetre pour toute forme
+    shape_info ne vérifie pas le type de la forme
     """
-
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
-
-
-
-
-
