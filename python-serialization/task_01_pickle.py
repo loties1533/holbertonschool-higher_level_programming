@@ -35,7 +35,7 @@ class CustomObject:
         """
         try:
             with open(filename, "wb") as fichier:
-                obj = pickle.load(fichier)
+                obj = pickle.dump(self, fichier)
             return obj
         except (OSError, pickle.PickleError):
             return None
