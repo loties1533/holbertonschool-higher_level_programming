@@ -37,8 +37,9 @@ class APIHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"endpoint not found")
 
+if __name__ == "__main__":
 
-PORT = 8000
-httpd = HTTPServer(("", PORT), APIHandler)
-print(f"Serving on port {PORT}...")
-httpd.serve_forever()
+    PORT = 8000
+    httpd = HTTPServer(("", PORT), APIHandler)
+    print(f"Serving on port {PORT}...")
+    httpd.serve_forever()
