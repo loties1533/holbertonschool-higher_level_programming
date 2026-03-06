@@ -35,4 +35,3 @@ if __name__ == "__main__":
     print(", ".join(cities))
     cursor.close()
     db.close()
-    
