@@ -20,9 +20,6 @@ if __name__ == "__main__":
     )
 
     cursor = db.cursor()
-    """
-    tous les states(états) par 'id' ordre croissant
-    """
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
     rows = cursor.fetchall()
     for row in rows:
