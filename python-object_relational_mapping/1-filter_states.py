@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-script qui liste tout les states (états) de la base de données hbtn_0e_0_usa qui commencent par la lettre N
+script qui liste tout les states (états) de la base de données hbtn_0e_0_usa
+qui commencent par la lettre N
 """
 import MySQLdb
 import sys
