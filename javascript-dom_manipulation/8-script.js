@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
   const url = 'https://hellosalut.stefanbohacek.com/?lang=fr';
-  const helloElement = document.getElementById('hello');
+  const helloElem = document.getElementById('hello');
 
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      helloElement.textContent = data.hello;
+      helloElem.textContent = data.hello;
     });
 });
