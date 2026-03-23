@@ -12,4 +12,3 @@ fetch(url)
       listMoviesUl.appendChild(listItem);
     });
   });
-  
