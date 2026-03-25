@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import json
 import csv
+import sqlite3
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -40,6 +41,20 @@ def read_csv():
             products.append(row)
     return products
 
+def read_sql():
+    products = []
+    try:
+        conn = sqlite3.connect('products.db')
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute('SELECT id, name, category, price FROM Products')
+        for row in cursor.fetchall():
+            products.append(dict(row))
+        conn.close()
+    except sqlite3.Error:
+        pass
+    return products
+
 @app.route('/products')
 def products():
     source = request.args.get('source')
@@ -49,6 +64,8 @@ def products():
         data = read_json()
     elif source == 'csv':
         data = read_csv()
+    elif source == 'sql':
+        data = read_sql()
     else:
         return render_template('product_display.html', error="Wrong source")
 
